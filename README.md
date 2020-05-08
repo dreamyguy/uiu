@@ -12,7 +12,7 @@ This is a work in progress, so documentation will be written as the project evol
 
 ## About
 
-**bit-react-tutorial-install** was put together by [Wallace Sidhrée][1]. 👨‍💻🇳🇴
+**UIU** was put together by [Wallace Sidhrée][1]. 👨‍💻🇳🇴
 
   [1]: http://sidhree.com/
   [2]: http://bit.dev/
