@@ -5,14 +5,28 @@
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
 # production
 /build
+/bin
+/lib
+/public
 
-# environments
+# documentation
+/docs
+
+# development mode
+.babelrc
+.editorconfig
+.env
 .env.*
+.eslintignore
+.eslintrc.js
+.nvmrc
+.prettierrc
+.travis.yml
+.vscode
+/src
+webpack.config.*
 
 # logs
 npm-debug.log*
