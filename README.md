@@ -1,8 +1,8 @@
 ![UIU](https://raw.githubusercontent.com/dreamyguy/uiu/master/docs/uiu-logo-github-full-width.png "UIU - A development library, with 'Bit' at its foundation")
 
-# 🚧⚡🧪 UIU
+# UIU
 
-> A _yet-to-be-written_ development library, with [**Bit**][2] at its foundation.
+> 🚧⚡🧪 A _yet-to-be-written_ development library, with [**Bit**][2] at its foundation.
 
 [![Build Status](https://travis-ci.com/dreamyguy/uiu.svg?branch=master)](https://travis-ci.com/dreamyguy/uiu) [![Node Version](https://img.shields.io/badge/node-v12.14.0-brightgreen.svg)](https://github.com/nodejs/node/releases/tag/v12.14.0) [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/uiu/blob/master/LICENSE)
 
