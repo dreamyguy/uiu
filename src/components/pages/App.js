@@ -57,6 +57,29 @@ const App = () => {
           animate
           animationDuration="1s"
           responsive
+          progress={progress}
+          progressColor="rgb(76, 154, 255)"
+          bgColor="#ecedf0"
+          textColor="#6b778c"
+          percentageSymbolColor="rgba(236, 237, 240, .5)"
+          percentageSymbolStyle={{
+            fontSize: '20em',
+          }}
+          textStyle={{
+            font: 'bold 4rem Helvetica, Arial, sans-serif',
+            fontSize: '10em',
+          }}
+          roundedStroke
+          showPercentage
+          showPercentageSymbol
+          showPercentageSymbolAsBackground
+        />
+      </div>
+      <div style={{ width: '200px', margin: '0 auto' }}>
+        <PercentageCircle
+          animate
+          animationDuration="1s"
+          responsive
           progress={75}
           progressColor="rgb(76, 154, 255)"
           bgColor="#ecedf0"

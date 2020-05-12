@@ -17,16 +17,19 @@ const PercentageCircle = props => {
   const {
     animate = true,
     animationDuration = '1s',
-    bgColor = '#ecedf0',
+    bgColor = 'rgb(236, 237, 240)',
     lineWidth = '25',
     onAnimationEnd,
-    percentSpacing = 10,
+    percentageSymbolColor = 'rgba(236, 237, 240, .5)',
+    percentageSymbolSpacing = 10,
+    percentageSymbolStyle,
     progress = 0,
     progressColor = 'rgb(76, 154, 255)',
     responsive,
     roundedStroke,
     showPercentage = true,
     showPercentageSymbol = true,
+    showPercentageSymbolAsBackground = false,
     size = '100',
     textColor = '#6b778c',
     textStyle = {
@@ -42,17 +45,33 @@ const PercentageCircle = props => {
   const renderText = () => {
     if (showPercentage) {
       return (
-        <text
-          style={textStyle}
-          fill={textColor}
-          x={radius}
-          y={radius}
-          textAnchor="middle"
-          dominantBaseline="central"
-        >
-          {progress}
-          {showPercentageSymbol && <tspan dx={percentSpacing}>%</tspan>}
-        </text>
+        <>
+          {showPercentageSymbol && showPercentageSymbolAsBackground && (
+            <text
+              style={percentageSymbolStyle}
+              fill={percentageSymbolColor}
+              x={radius}
+              y={radius}
+              textAnchor="middle"
+              dominantBaseline="central"
+            >
+              %
+            </text>
+          )}
+          <text
+            style={textStyle}
+            fill={textColor}
+            x={radius}
+            y={radius}
+            textAnchor="middle"
+            dominantBaseline="central"
+          >
+            {progress}
+            {showPercentageSymbol && !showPercentageSymbolAsBackground && (
+              <tspan dx={percentageSymbolSpacing}>%</tspan>
+            )}
+          </text>
+        </>
       );
     }
     return null;
@@ -81,20 +100,23 @@ const PercentageCircle = props => {
 };
 
 PercentageCircle.propTypes = {
-  progress: PropTypes.number.isRequired,
   animate: PropTypes.bool,
   animationDuration: PropTypes.string,
+  bgColor: PropTypes.string,
+  lineWidth: PropTypes.string,
+  percentageSymbolColor: PropTypes.string,
+  percentageSymbolSpacing: PropTypes.number,
+  percentageSymbolStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  progress: PropTypes.number.isRequired,
+  progressColor: PropTypes.string,
+  responsive: PropTypes.bool,
+  roundedStroke: PropTypes.bool,
   showPercentage: PropTypes.bool,
   showPercentageSymbol: PropTypes.bool,
-  progressColor: PropTypes.string,
-  bgColor: PropTypes.string,
-  textColor: PropTypes.string,
+  showPercentageSymbolAsBackground: PropTypes.bool,
   size: PropTypes.string,
-  lineWidth: PropTypes.string,
-  percentSpacing: PropTypes.number,
+  textColor: PropTypes.string,
   textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  roundedStroke: PropTypes.bool,
-  responsive: PropTypes.bool,
 };
 
 export default PercentageCircle;
