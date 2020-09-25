@@ -1,5 +1,5 @@
 import React from 'react';
-import PercentageCircleDemo from './../modules/PercentageCircle/demo';
+import { PercentageCircleDemo } from 'components/modules/PercentageCircle';
 import './App.css';
 
 const App = () => (
