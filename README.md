@@ -4,7 +4,7 @@
 
 > 🚧⚡🧪 A _yet-to-be-written_ development library, with [**Bit**][2] at its foundation.
 
-[![Build Status](https://travis-ci.com/dreamyguy/uiu.svg?branch=master)](https://travis-ci.com/dreamyguy/uiu) [![Node Version](https://img.shields.io/badge/node-v12.14.0-brightgreen.svg)](https://github.com/nodejs/node/releases/tag/v12.14.0) [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/uiu/blob/master/LICENSE)
+[![Build Status](https://travis-ci.com/dreamyguy/uiu.svg?branch=master)](https://travis-ci.com/dreamyguy/uiu) [![Node Version](https://img.shields.io/badge/node-v14.12.0-brightgreen.svg)](https://github.com/nodejs/node/releases/tag/v14.12.0) [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/uiu/blob/master/LICENSE)
 
 **UIU** was initialized as a [Create React App][3], but its main purpose is to serve as a repository for components, utilities and helpers to be developed, tested and maintained alongside each other - while publishing them separately.
 
@@ -24,7 +24,7 @@ This is a work in progress, so documentation will be written as the project evol
 
 **UIU** was put together by [Wallace Sidhrée][1]. 👨‍💻🇳🇴
 
-  [1]: http://sidhree.com/
-  [2]: http://bit.dev/
-  [3]: https://facebook.github.io/create-react-app/
-  [4]: https://bit.dev/dreamyguy/uiu
+[1]: http://sidhree.com/
+[2]: http://bit.dev/
+[3]: https://facebook.github.io/create-react-app/
+[4]: https://bit.dev/dreamyguy/uiu

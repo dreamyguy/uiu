@@ -1,6 +1,6 @@
 {
   "name": "uiu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A development library, with 'Bit' at its foundation",
   "keywords": [
     "development library",
@@ -24,20 +24,20 @@
   "copyright": "Copyright (c) Wallace Sidhrée - MIT LICENSE",
   "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.7.0",
-    "@testing-library/react": "^10.0.4",
-    "@testing-library/user-event": "^10.1.2",
-    "axios": "^0.19.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.6",
+    "axios": "^0.20.0",
     "d3-scale-chromatic": "^2.0.0",
     "dotenv": "^8.2.0",
     "fork-me-on-github": "^1.0.6",
     "json-server": "^0.16.1",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-emojis": "^1.0.6",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "build": "react-scripts build",
@@ -49,18 +49,18 @@
     "test:travis": "react-scripts test"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "babel-eslint": "^10.1.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "prettier": "^2.0.5"
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -78,7 +78,6 @@
     ]
   },
   "engines": {
-    "node": "^v12.14.0",
-    "npm": "^6.13.4"
+    "node": "^v14.12.0"
   }
 }
