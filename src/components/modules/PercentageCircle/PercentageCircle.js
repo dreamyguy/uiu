@@ -8,27 +8,34 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as d3 from 'd3-scale-chromatic';
+import { fadeFromGradient } from './../../../utils/colorToColorUtil';
 
 const radius = 175;
 const diameter = Math.round(Math.PI * radius * 2);
 const getOffset = (val = 0) => Math.round(((100 - Math.min(val, 100)) / 100) * diameter);
+
+// Set default gradient
+const gradientRdYlGn = d3.interpolateRdYlGn;
 
 const PercentageCircle = props => {
   const {
     animate = true,
     animationDuration = '1s',
     bgColor = 'rgb(236, 237, 240)',
+    gradient = gradientRdYlGn,
     lineWidth = '25',
     onAnimationEnd,
     percentageSymbolColor = 'rgba(236, 237, 240, .5)',
     percentageSymbolSpacing = 10,
     percentageSymbolStyle,
     progress = 0,
-    progressColor = 'rgb(76, 154, 255)',
+    progressColor = 'rgb(46, 204, 64)', // green
+    progressColorIsDynamic = false,
     responsive,
     roundedStroke,
-    showPercentage = true,
-    showPercentageSymbol = true,
+    showPercentage = false,
+    showPercentageSymbol = false,
     showPercentageSymbolAsBackground = false,
     size = '100',
     textColor = '#6b778c',
@@ -77,11 +84,21 @@ const PercentageCircle = props => {
     return null;
   };
 
+  const setProgressColor = () => {
+    if (progressColorIsDynamic && gradient) {
+      return fadeFromGradient({
+        gradient,
+        step: progress / 100,
+      });
+    }
+    return progressColor;
+  };
+
   return (
     <svg width={svgSize} height={svgSize} viewBox="-25 -25 400 400">
       <circle stroke={bgColor} cx="175" cy="175" r="175" strokeWidth={lineWidth} fill="none" />
       <circle
-        stroke={progressColor}
+        stroke={setProgressColor()}
         transform="rotate(-90 175 175)"
         cx="175"
         cy="175"
